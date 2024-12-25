@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/employee').then(() => {
 }).catch((error) => {
     console.error('Error connecting to MongoDB:', error);
 });
-app.post("/ login", (req, res) => {
+app.post("/login", (req, res) => {
     const {email,password}=req.body;
         EmployeeModel.findOne({email:email})
     .then(user=>{
