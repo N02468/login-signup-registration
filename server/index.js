@@ -3,8 +3,15 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const EmployeeModel = require('./models/Employee');
 const app = express();
+app.use(cors(
+    {
+        origin:["https://deploy-mern-1whq.vercel.app"],
+        method:["POST","GET"],
+        credintials:true
+    }
+));
 app.use(express.json());
-app.use(cors());
+
 
 mongoose.connect('mongodb://localhost:27017/employee').then(() => {
     console.log('Connected to MongoDB');
