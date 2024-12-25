@@ -5,7 +5,7 @@ const EmployeeModel = require('./models/Employee');
 const app = express();
 app.use(cors(
     {
-        origin:["https://deploy-mern-1whq.vercel.app"],
+        origin:["login-signup-registration.vercel.app"],
         method:["POST","GET"],
         credintials:true
     }
